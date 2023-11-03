@@ -23,56 +23,25 @@ concepts. For documentation of your own system you use better the
 
 # Introduction and Goals
 
-Describes the relevant requirements and the driving forces that software
-architects and development team must consider. These include
-
--   underlying business goals,
-
--   essential features,
-
--   essential functional requirements,
-
--   quality goals for the architecture and
-
--   relevant stakeholders and their expectations
+The main purpose of InstaShare is to provide photography enthusiasts and professionals with a platform to share and discover
+high quality images, offering advanced editing tools, customizable filters and a strong community aspect, while differentiati ng
+itself from other social media platforms.
 
 ## Requirements Overview
 
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Short textual description, probably in tabular use-case format. If
-requirements documents exist this overview should refer to these
-documents.
-
-Keep these excerpts as short as possible. Balance readability of this
-document with potential redundancy w.r.t to requirements documents.
-
-See [Introduction and Goals](https://docs.arc42.org/section-1/) in the
-arc42 documentation.
+| Id     | Requirement            | Explanation                                                                                                     |
+|--------|------------------------|-----------------------------------------------------------------------------------------------------------------|
+| *F1*   | *User Management*      | *Users can create and log in to their accounts in the app*                                                      |
+| *F1.1* | *User Profiles*        | *Users can create collections of their images*                                                                  |
+| *F1.2* | *Users Connection*     | *Users can follow other users*                                                                                  |
+| *F2*   | *Image Upload*         | *Images can be uploaded, inculding title, description and optional tags*                                        |
+| *F3*   | *Pixlr Integration*    | *Pixlr is integrated in the app as 3rd-party tool*                                                              |
+| *F3.1* | *Image Editing*        | *Images can be edited by using variuos tools which are provided by Pixlr*                                       |
+| *F4*   | *Image Filters*        | *Custom filters can be created and applied to images, and pre-made filters can be used*                         |
+| *F5*   | *User Community*       | *Specific competitions or challanges can be created by users, that should encourage other users to participate* |
+| *F7*   | *Image Popularity*     | *Users can like other user's images and leave comments*                                                         |
+| *F8*   | *Subscription Model*   | *Users can either use a free version of the app with limited features, or a paid subscription for all features* |
+| *F8.1* | *Subscription Payment* | *Users can pay for a subscription on an annual or monthly basis*                                                   |
 
 ## Quality Goals
 
@@ -869,17 +838,24 @@ documentation.
 
 </div>
 
-Important, expensive, large scale or risky architecture decisions
-including rationales. With "decisions" we mean selecting one alternative
-based on given criteria.
+Right architecture style
 
-Please use your judgement to decide whether an architectural decision
-should be documented here in this central section or whether you better
-document it locally (e.g. within the white box template of one building
-block).
+Monolithic vs Microservices Architecture
 
-Avoid redundancy. Refer to section 4, where you already captured the
-most important decisions of your architecture.
+Decision -> Microservices Architecture
+
+- Resilience: Higher fault tolerance -> one failing service won't bring down entire system
+- Flexibility & Scalability: Scalable components/services on demand, independant services
+
+Database for larger volumes of data
+
+SQL vs NoSQL
+
+Decision -> Mix of both
+
+- SQL (MySQL) database for structured user data, complex relationships, ACID compliance, complex queries
+
+- NoSQL (MongoDB) database for user-generated content, real-time feeds (fast writes) and notifications, flexibility, simplicity & speed
 
 <div class="formalpara-title">
 
@@ -1034,8 +1010,9 @@ Tabular or free form text.
 
 </div>
 
-A list of identified technical risks or technical debts, ordered by
-priority
+1. Complexity of Orchestration: Managing a large number of microservices can introduce complexity in terms of orchestration, monitoring, and debugging.
+2. Security challenge Since each service may have its own data store and communication protocol, there is a risk of data leakage, tampering, or interception by malicious actors.
+3. Inter-service Communication:Effective communication between microservices is crucial for the system to Challenges work cohesively. If not properly implemented, this can introduce latency and potencial points of failure. 
 
 <div class="formalpara-title">
 
