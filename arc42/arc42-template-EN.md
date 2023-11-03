@@ -1003,8 +1003,9 @@ Tabular or free form text.
 
 </div>
 
-A list of identified technical risks or technical debts, ordered by
-priority
+1. Complexity of Orchestration: Managing a large number of microservices can introduce complexity in terms of orchestration, monitoring, and debugging.
+2. Security challenge Since each service may have its own data store and communication protocol, there is a risk of data leakage, tampering, or interception by malicious actors.
+3. Inter-service Communication:Effective communication between microservices is crucial for the system to Challenges work cohesively. If not properly implemented, this can introduce latency and potencial points of failure. 
 
 <div class="formalpara-title">
 
