@@ -838,17 +838,24 @@ documentation.
 
 </div>
 
-Important, expensive, large scale or risky architecture decisions
-including rationales. With "decisions" we mean selecting one alternative
-based on given criteria.
+Right architecture style
 
-Please use your judgement to decide whether an architectural decision
-should be documented here in this central section or whether you better
-document it locally (e.g. within the white box template of one building
-block).
+Monolithic vs Microservices Architecture
 
-Avoid redundancy. Refer to section 4, where you already captured the
-most important decisions of your architecture.
+Decision -> Microservices Architecture
+
+- Resilience: Higher fault tolerance -> one failing service won't bring down entire system
+- Flexibility & Scalability: Scalable components/services on demand, independant services
+
+Database for larger volumes of data
+
+SQL vs NoSQL
+
+Decision -> Mix of both
+
+- SQL (MySQL) database for structured user data, complex relationships, ACID compliance, complex queries
+
+- NoSQL (MongoDB) database for user-generated content, real-time feeds (fast writes) and notifications, flexibility, simplicity & speed
 
 <div class="formalpara-title">
 
