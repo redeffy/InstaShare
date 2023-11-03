@@ -23,56 +23,25 @@ concepts. For documentation of your own system you use better the
 
 # Introduction and Goals
 
-Describes the relevant requirements and the driving forces that software
-architects and development team must consider. These include
-
--   underlying business goals,
-
--   essential features,
-
--   essential functional requirements,
-
--   quality goals for the architecture and
-
--   relevant stakeholders and their expectations
+The main purpose of InstaShare is to provide photography enthusiasts and professionals with a platform to share and discover
+high quality images, offering advanced editing tools, customizable filters and a strong community aspect, while differentiati ng
+itself from other social media platforms.
 
 ## Requirements Overview
 
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Short textual description, probably in tabular use-case format. If
-requirements documents exist this overview should refer to these
-documents.
-
-Keep these excerpts as short as possible. Balance readability of this
-document with potential redundancy w.r.t to requirements documents.
-
-See [Introduction and Goals](https://docs.arc42.org/section-1/) in the
-arc42 documentation.
+| Id     | Requirement            | Explanation                                                                                                     |
+|--------|------------------------|-----------------------------------------------------------------------------------------------------------------|
+| *F1*   | *User Management*      | *Users can create and log in to their accounts in the app*                                                      |
+| *F1.1* | *User Profiles*        | *Users can create collections of their images*                                                                  |
+| *F1.2* | *Users Connection*     | *Users can follow other users*                                                                                  |
+| *F2*   | *Image Upload*         | *Images can be uploaded, inculding title, description and optional tags*                                        |
+| *F3*   | *Pixlr Integration*    | *Pixlr is integrated in the app as 3rd-party tool*                                                              |
+| *F3.1* | *Image Editing*        | *Images can be edited by using variuos tools which are provided by Pixlr*                                       |
+| *F4*   | *Image Filters*        | *Custom filters can be created and applied to images, and pre-made filters can be used*                         |
+| *F5*   | *User Community*       | *Specific competitions or challanges can be created by users, that should encourage other users to participate* |
+| *F7*   | *Image Popularity*     | *Users can like other user's images and leave comments*                                                         |
+| *F8*   | *Subscription Model*   | *Users can either use a free version of the app with limited features, or a paid subscription for all features* |
+| *F8.1* | *Subscription Payment* | *Users can pay for a subscription on an annual or monthly basis*                                                   |
 
 ## Quality Goals
 
