@@ -155,7 +155,7 @@ to the architecture and its documentation.
 
 | Role/Name   | Contact        | Expectations       |
 |-------------|----------------|--------------------|
-| *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
+| *\<Project Manager (Michael Nguyen)>* | *\<Contact-1>* | *\<Expectation-1>* |
 | *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
 
 <div style="page-break-after: always;"></div>
